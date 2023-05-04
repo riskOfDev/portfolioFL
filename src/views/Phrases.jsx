@@ -20,6 +20,7 @@ const Phrases = () => {
     initialInView: false,
     skip: false,
   });
+  // comment test
 
   useEffect(() => {
     if (inView) {
