@@ -1,15 +1,15 @@
 import React from "react";
-import Career from "../views/Career";
+import Footer from "../views/Footer";
 import { Box } from "@chakra-ui/react";
 
-const auxCareer = () => {
+const auxFooter = () => {
   return (
     <>
       <Box bg="blue" w="100" h="100vh"></Box>
-      <Career />
+      <Footer />
       <Box bg="blue" w="100" h="100vh"></Box>
     </>
   );
 };
 
-export default auxCareer;
+export default auxFooter;
