@@ -42,7 +42,7 @@ const Phrases = () => {
             transition: "opacity 0.5s ease-in-out",
           }}
         >
-          EMPATHIZE
+          EM<u>P</u>H<u>A</u>THIZE
         </Text>
         <Text
           fontSize="8xl"
@@ -54,7 +54,7 @@ const Phrases = () => {
             transition: "opacity 0.5s ease-in-out",
           }}
         >
-          IDEATE
+          IDE<u>A</u>TE
         </Text>
         <Text
           fontSize="8xl"
