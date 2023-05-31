@@ -3,6 +3,8 @@ import { marked } from "marked";
 import DOMPurify from "isomorphic-dompurify";
 import emojis from "./readmos/emojis";
 
+import ProjectsStyle from "../../styles/Projects.module.css";
+
 const Project = ({ username, repoName, name, description, link }) => {
   const [clean, setClean] = useState("");
 
@@ -41,17 +43,17 @@ const Project = ({ username, repoName, name, description, link }) => {
     }
 
     function replaceIcons(dirty) {
-      const regexp = RegExp(":[a-zA-Z1-9_+-]*:", "g");
+      const regexp = RegExp(":([a-zA-Z1-9_+-]*):", "g");
       let dirtyCopy = dirty;
-      let word;
-      let ocurrency;
+      let matches;
 
-      while ((ocurrency = regexp.exec(dirty)) !== null) {
-        word = ocurrency[0].slice(1, -1);
+      while ((matches = regexp.exec(dirtyCopy)) !== null) {
+        const shortcode = matches[0];
+        const word = matches[1];
 
         if (Object.keys(emojisObject).includes(word)) {
-          let emojiHTML = `<img class="githubEmoji" src="${emojisObject[word]}"></img>`;
-          dirtyCopy = dirtyCopy.replace(/\:[a-zA-Z_]*\:/, emojiHTML);
+          const emojiUnicode = emojisObject[word];
+          dirtyCopy = dirtyCopy.replace(shortcode, emojiUnicode);
         }
       }
 
@@ -64,8 +66,7 @@ const Project = ({ username, repoName, name, description, link }) => {
   };
 
   return (
-    <div>
-      <div className="readmosWrapper" id={``}></div>
+    <div className={ProjectsStyle.markdownbody}>
       <button onClick={handleClick}>Readme</button>
       {/* Result */}
 
@@ -73,6 +74,7 @@ const Project = ({ username, repoName, name, description, link }) => {
         dangerouslySetInnerHTML={{
           __html: clean,
         }}
+        className="markdownbody"
       />
     </div>
   );
