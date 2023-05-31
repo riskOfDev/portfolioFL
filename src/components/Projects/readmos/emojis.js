@@ -1,4 +1,4 @@
-var emojis = {
+const emojis = {
   "+1": "https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png?v8",
   "-1": "https://github.githubassets.com/images/icons/emoji/unicode/1f44e.png?v8",
   100: "https://github.githubassets.com/images/icons/emoji/unicode/1f4af.png?v8",
@@ -3368,3 +3368,5 @@ var emojis = {
     "https://github.githubassets.com/images/icons/emoji/unicode/1f9df-2640.png?v8",
   zzz: "https://github.githubassets.com/images/icons/emoji/unicode/1f4a4.png?v8",
 };
+
+export default emojis;

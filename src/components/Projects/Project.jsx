@@ -20,13 +20,9 @@ const Project = ({ username, repoName, name, description, link }) => {
       const response = await fetch(userURL);
       const result = await response.json();
 
-      console.log(result);
-
       let rawURL = result[0].html_url + "/master/README.md";
       rawURL = [rawURL.slice(0, 8), "raw.", rawURL.slice(8)].join("");
       rawURL = rawURL.replace("github", "githubusercontent");
-
-      console.log(rawURL);
 
       fetchReadme(rawURL);
     }
@@ -37,23 +33,36 @@ const Project = ({ username, repoName, name, description, link }) => {
 
       let dirty = marked.parse(text);
       dirty = replaceIcons(dirty);
+
+      // console.log(dirty);
       let clean = DOMPurify.sanitize(dirty);
 
       setClean(clean);
     }
 
     function replaceIcons(dirty) {
-      const regexp = RegExp(":([a-zA-Z1-9_+-]*):", "g");
+      const regexp = RegExp(":[a-zA-Z1-9_+-]*:", "g");
       let dirtyCopy = dirty;
-      let matches;
+      let word;
+      let ocurrency;
 
-      while ((matches = regexp.exec(dirtyCopy)) !== null) {
-        const shortcode = matches[0];
-        const word = matches[1];
+      while ((ocurrency = regexp.exec(dirty)) !== null) {
+        console.log(
+          `Found ${ocurrency[0]} start=${ocurrency.index} end=${regexp.lastIndex}.`
+        );
 
-        if (Object.keys(emojisObject).includes(word)) {
-          const emojiUnicode = emojisObject[word];
-          dirtyCopy = dirtyCopy.replace(shortcode, emojiUnicode);
+        // Delete the : of the word
+        word = ocurrency[0].slice(1, -1);
+        console.log("word", word);
+        console.log(emojis);
+        // Compare if the emoji syntax is on the emojis
+        if (Object.keys(emojis).includes(word)) {
+          console.log("aaaaaaaaaaaaaaaaaaa");
+          let emojiHTML = `<img style="width: 1em; display: inline" src="${emojis[word]}"></img>`;
+
+          dirtyCopy = dirtyCopy.replace(/\:[a-zA-Z_]*\:/, emojiHTML);
+
+          console.log("dirtyCopy,dirtyCopy", dirtyCopy);
         }
       }
 
