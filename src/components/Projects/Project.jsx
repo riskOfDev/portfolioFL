@@ -7,6 +7,7 @@ import ProjectsStyle from "../../styles/Projects.module.css";
 
 const Project = ({ username, repoName, name, description, link }) => {
   const [clean, setClean] = useState("");
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const emojisObject = emojis;
@@ -57,7 +58,6 @@ const Project = ({ username, repoName, name, description, link }) => {
         console.log(emojis);
         // Compare if the emoji syntax is on the emojis
         if (Object.keys(emojis).includes(word)) {
-          console.log("aaaaaaaaaaaaaaaaaaa");
           let emojiHTML = `<img style="width: 1em; display: inline" src="${emojis[word]}"></img>`;
 
           dirtyCopy = dirtyCopy.replace(/\:[a-zA-Z_]*\:/, emojiHTML);
@@ -72,6 +72,7 @@ const Project = ({ username, repoName, name, description, link }) => {
 
   const handleClick = () => {
     console.log("clicked");
+    setOpen(!open);
   };
 
   return (
@@ -79,12 +80,14 @@ const Project = ({ username, repoName, name, description, link }) => {
       <button onClick={handleClick}>Readme</button>
       {/* Result */}
 
-      <div
-        dangerouslySetInnerHTML={{
-          __html: clean,
-        }}
-        className="markdownbody"
-      />
+      {open && (
+        <div
+          dangerouslySetInnerHTML={{
+            __html: clean,
+          }}
+          className="markdownbody"
+        />
+      )}
     </div>
   );
 };
