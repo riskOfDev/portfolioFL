@@ -1,5 +1,5 @@
 import React from "react";
-import Project from "../components/Project";
+import Project from "../components/Projects/Project";
 
 const Projects = () => {
   // list of projects ( refactor to integration with readmos )
