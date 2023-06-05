@@ -32,10 +32,10 @@ const Project = ({ type, name, thumbnail, links, number }) => {
       <Box ml={number % 2 ? "30px" : "0px"} className="textContent">
         {/* Name and type */}
         <Box>
-          <Heading as="h1" fontSize="xl">
+          <Heading as="h1" fontSize="5xl">
             {type}
           </Heading>
-          <Heading as="h2" fontSize="lg" mt={1}>
+          <Heading as="h2" fontSize="5xl" mt={1}>
             {name}
           </Heading>
         </Box>
