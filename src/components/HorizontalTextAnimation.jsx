@@ -18,7 +18,13 @@ const HorizontalTextAnimation = ({ text, defaultDirection = "right" }) => {
   useEffect(() => {
     const handleScroll = () => {
       const currentPosition = window.scrollY;
-      setTranslateX(translateX + (scrollPosition - currentPosition) * 0.5); // Modify 0.5 to change speed
+      let newTranslateX;
+      if (defaultDirection === "right") {
+        newTranslateX = translateX + (scrollPosition - currentPosition) * 0.5;
+      } else {
+        newTranslateX = translateX - (scrollPosition - currentPosition) * 0.5;
+      }
+      setTranslateX(newTranslateX);
       setScrollPosition(currentPosition);
     };
 
@@ -26,7 +32,7 @@ const HorizontalTextAnimation = ({ text, defaultDirection = "right" }) => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [scrollPosition, translateX]);
+  }, [scrollPosition, translateX, defaultDirection]);
 
   return (
     <div>
