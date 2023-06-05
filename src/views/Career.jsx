@@ -4,7 +4,13 @@ import HorizontalTextAnimation from "../components/HorizontalTextAnimation";
 const Career = () => {
   return (
     <div>
-      <HorizontalTextAnimation />
+      <HorizontalTextAnimation
+        text="WEB DESIGN — INTERFACES — UI/UX — SITE WEB — LOGO — BRANDING — VISUAL
+          IDENTITY — APP DESIGN — MOBILE DESIGN — WEB DESIGN — INTERFACES —
+          UI/UX — SITE WEB — LOGO — BRANDINGWEB DESIGN — INTERFACES — UI/UX —
+          SITE WEB — LOGO — BRANDING — VISUAL IDENTITY — APP DESIGN — MOBILE
+          DESIGN — WEB DESIGN — INTERFACES — UI/UX — SITE WEB — LOGO — BRANDING"
+      />
       {/* Side Left */}
       <div>CAREER</div>
       {/* Content */}

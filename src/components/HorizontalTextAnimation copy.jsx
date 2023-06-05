@@ -11,7 +11,7 @@ const titleStyle = {
   transition: "transform 0.3s ease-in-out",
 };
 
-const HorizontalTextAnimation = ({ text, defaultDirection = "right" }) => {
+const HorizontalTextAnimation = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [translateX, setTranslateX] = useState(0);
 
@@ -32,7 +32,11 @@ const HorizontalTextAnimation = ({ text, defaultDirection = "right" }) => {
     <div>
       <div style={{ position: "sticky", top: 0 }}>
         <h1 style={{ ...titleStyle, transform: `translateX(${translateX}px)` }}>
-          {text}
+          WEB DESIGN — INTERFACES — UI/UX — SITE WEB — LOGO — BRANDING — VISUAL
+          IDENTITY — APP DESIGN — MOBILE DESIGN — WEB DESIGN — INTERFACES —
+          UI/UX — SITE WEB — LOGO — BRANDINGWEB DESIGN — INTERFACES — UI/UX —
+          SITE WEB — LOGO — BRANDING — VISUAL IDENTITY — APP DESIGN — MOBILE
+          DESIGN — WEB DESIGN — INTERFACES — UI/UX — SITE WEB — LOGO — BRANDING
         </h1>
       </div>
     </div>
