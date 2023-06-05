@@ -1,9 +1,12 @@
-import React, { useState } from "react";
-import Image from "next/image";
-import { Box, Flex, Heading, Link } from "@chakra-ui/react";
+import React, { useEffect, useState } from "react";
+import { marked } from "marked";
 import DOMPurify from "isomorphic-dompurify";
-
 import emojis from "./readmos/emojis";
+
+import ProjectsStyle from "../../styles/Projects.module.css";
+import styles from "../../styles/Project.module.css";
+
+import Image from "next/image";
 
 const Project = ({ type, name, thumbnail, links, number }) => {
   const [open, setOpen] = useState(false);
@@ -14,10 +17,12 @@ const Project = ({ type, name, thumbnail, links, number }) => {
   };
 
   return (
-    <Flex
-      direction={number % 2 ? "row" : "row-reverse"}
-      padding="30px"
-      alignItems="center"
+    <div
+      style={
+        number % 2
+          ? { display: "flex", padding: "30px" }
+          : { display: "flex", padding: "30px", flexDirection: "row-reverse" }
+      }
     >
       {/* Thumbnail */}
 
@@ -29,117 +34,95 @@ const Project = ({ type, name, thumbnail, links, number }) => {
         src={`/thumbnails/${thumbnail}`}
       />
 
-      <Box ml={number % 2 ? "30px" : "0px"} className="textContent">
+      <div className={styles.textContent}>
         {/* Name and type */}
-        <Box>
-          <Heading as="h1" fontSize="5xl">
-            {type}
-          </Heading>
-          <Heading as="h2" fontSize="5xl" mt={1}>
-            {name}
-          </Heading>
-        </Box>
+
+        <div>
+          <h1>{type}</h1>
+          <h2>{name}</h2>
+        </div>
 
         {/* Links */}
-        <Flex mt={4}>
+
+        <div className={styles.links}>
           {Object.keys(links).map((link, index) => {
             if (link === "github") {
               return (
-                <Link
+                <a
                   key={name}
                   href={links[link]}
                   target="_blank"
                   rel="noopener noreferrer"
-                  display="flex"
-                  alignItems="center"
-                  mr={4}
-                  _hover={{ color: "blue.500" }}
                 >
                   <Image
-                    src="/icons/github.svg"
+                    width={60}
+                    height={60}
                     alt="github"
-                    width={30}
-                    height={30}
-                    style={{ marginRight: "8px" }}
+                    src="/icons/github.svg"
                   />
                   Github
-                </Link>
+                </a>
               );
             }
             if (link === "demo") {
               return (
-                <Link
+                <a
                   key={name}
                   href={links[link]}
                   target="_blank"
                   rel="noopener noreferrer"
-                  display="flex"
-                  alignItems="center"
-                  mr={4}
-                  _hover={{ color: "blue.500" }}
                 >
                   <Image
-                    src="/icons/web-2.svg"
+                    width={60}
+                    height={60}
                     alt="demo"
-                    width={30}
-                    height={30}
-                    style={{ marginRight: "8px" }}
+                    src="/icons/web-2.svg"
                   />
                   Live
-                </Link>
+                </a>
               );
             }
             if (link === "behance") {
               return (
-                <Link
+                <a
                   key={name}
                   href={links[link]}
                   target="_blank"
                   rel="noopener noreferrer"
-                  display="flex"
-                  alignItems="center"
-                  mr={4}
-                  _hover={{ color: "blue.500" }}
                 >
                   <Image
-                    src="/icons/behance.svg"
+                    width={60}
+                    height={60}
                     alt="behance"
-                    width={30}
-                    height={30}
-                    style={{ marginRight: "8px" }}
+                    src="/icons/behance.svg"
                   />
                   Behance
-                </Link>
+                </a>
               );
             }
             if (link === "figma") {
               return (
-                <Link
+                <a
                   key={name}
                   href={links[link]}
                   target="_blank"
                   rel="noopener noreferrer"
-                  display="flex"
-                  alignItems="center"
-                  mr={4}
-                  _hover={{ color: "blue.500" }}
                 >
                   <Image
-                    src="/icons/figma.svg"
+                    width={60}
+                    height={60}
                     alt="figma"
-                    width={30}
-                    height={30}
-                    style={{ marginRight: "8px" }}
+                    src="/icons/figma.svg"
                   />
                   Figma
-                </Link>
+                </a>
               );
             }
             return null; // Return null for other cases
           })}
-        </Flex>
-      </Box>
-    </Flex>
+        </div>
+      </div>
+    </div>
   );
 };
 

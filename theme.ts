@@ -7,16 +7,13 @@ const theme = extendTheme({
         height: "100%",
         width: "100%",
         bg: "#f1f2f3",
+        fontFamily: "Gemunu Libre, sans-serif", // Set the default font
       },
     },
   },
   colors: {
     primary: "#8F00FF",
   },
-  // fonts: {
-  //   primary: "Montserrat",
-  //   secondary: 'Merriweather Sans'
-  // },
 });
 
 export default theme;
