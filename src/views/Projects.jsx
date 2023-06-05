@@ -9,8 +9,6 @@ const Projects = () => {
       name: "Sannabis",
       thumbnail: "sannabis.png",
       links: {
-        github: "https://www.google.com",
-        demo: "https://www.google.com",
         behance: "https://www.google.com",
         figma: "https://www.google.com",
       },
@@ -18,7 +16,7 @@ const Projects = () => {
     {
       type: "WEB DESIGN",
       name: "riskOfDev",
-      thumbnail: "sannabis.png",
+      thumbnail: "riskofdev.png",
       links: {
         github: "https://www.google.com",
         demo: "https://www.google.com",
@@ -52,6 +50,7 @@ const Projects = () => {
         // />
         <Project
           key={index}
+          number={index + 1}
           type={project.type}
           name={project.name}
           thumbnail={project.thumbnail}
