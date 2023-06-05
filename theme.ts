@@ -11,7 +11,7 @@ const theme = extendTheme({
     },
   },
   colors: {
-    primary: "#025940",
+    primary: "#8F00FF",
   },
   // fonts: {
   //   primary: "Montserrat",
