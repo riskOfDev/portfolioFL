@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 30vh;
+}
+
+.title h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: 70px;
+}
+
+.title h2 {
+    font-size: 50px;
+}
+
+.center {}
+
+.motto {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100px;
+    position: relative;
+    font-size: 10vh;
+}
+
+.design,
+.love {
+    position: relative;
+}
+
+.design {
+    padding-left: 20px;
+    left: 0;
+}
+
+.whatyou {
+    padding-top: 105px;
+    padding-left: 50px;
+}
+
+.love {
+    padding-top: 150px;
+    padding-right: 100px;
+    right: 0;
+    top: 20px;
+}
+
+.line {
+    width: 100%;
+}
+
+.line img {
+    display: block;
+    width: 100%;
+}
+
+.socialMedia {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+.socialMedia ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.socialMedia ul li {
+    margin-bottom: 40px;
+}
