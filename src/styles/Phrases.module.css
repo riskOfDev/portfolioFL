@@ -1,0 +1,5 @@
+.cute {
+  background: linear-gradient(to right, #AB47E9, #eabdff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

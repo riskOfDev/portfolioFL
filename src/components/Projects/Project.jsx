@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { Box, Flex, Heading, Link } from "@chakra-ui/react";
 import DOMPurify from "isomorphic-dompurify";
-
 import emojis from "./readmos/emojis";
+import TiltImage from "./TiltImage";
 
-const Project = ({ type, name, thumbnail, links, number }) => {
+const Project = ({ type, name, thumbnail, links, number, generalLink }) => {
   const [open, setOpen] = useState(false);
 
   const handleClick = () => {
@@ -21,13 +21,9 @@ const Project = ({ type, name, thumbnail, links, number }) => {
     >
       {/* Thumbnail */}
 
-      <Image
-        width={900}
-        height={900}
-        alt={name}
-        style={{ borderRadius: "10px" }}
-        src={`/thumbnails/${thumbnail}`}
-      />
+      <a href={generalLink}>
+        <TiltImage image={`/thumbnails/${thumbnail}`}></TiltImage>
+      </a>
 
       <Box ml={number % 2 ? "30px" : "0px"} className="textContent">
         {/* Name and type */}

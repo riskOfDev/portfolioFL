@@ -5,7 +5,7 @@ import Image from "next/image";
 const Hero = () => {
   return (
     <>
-      <div className={styles.container}>
+      <div className={styles.container} style={{ height: "100vh" }}>
         <div className={styles.title}>
           <h1>HELLO, I'M FLORENCIA</h1>
           <h2>UX/UI DESIGNER</h2>

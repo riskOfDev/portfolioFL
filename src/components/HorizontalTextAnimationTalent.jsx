@@ -22,7 +22,7 @@ const HorizontalTextAnimationTalent = ({
   type = "notMiddle",
 }) => {
   const [scrollPosition, setScrollPosition] = useState(0);
-  const [translateX, setTranslateX] = useState(-2500);
+  const [translateX, setTranslateX] = useState(-2900);
 
   useEffect(() => {
     const handleScroll = () => {

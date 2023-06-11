@@ -19,12 +19,12 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
+      <main style={{ backgroundColor: "#F7E7FF" }}>
         <Navbar />
+        <div style={{ height: "80px" }}></div>
         <Hero />
         <Phrases />
         <Career />
-        <Banner />
         <Projects />
         <Crazy />
         <LetsGetInTouch />

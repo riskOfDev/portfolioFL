@@ -1,6 +1,7 @@
 import { Box, Center, Text } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
+import styles from "../styles/Phrases.module.css";
 
 const Phrases = () => {
   const [isVisible, setIsVisible] = useState([false, false, false]);
@@ -30,7 +31,13 @@ const Phrases = () => {
   }, [inView]);
 
   return (
-    <Center h="100vh">
+    <Center
+      h="100vh"
+      style={{
+        background:
+          "radial-gradient(circle at center center, rgb(237 201 255) 0%, white 46%)",
+      }}
+    >
       <Box textAlign="center">
         <Text
           fontSize="8xl"
@@ -66,7 +73,8 @@ const Phrases = () => {
             transition: "opacity 0.5s ease-in-out",
           }}
         >
-          EXE<span style={{ color: "pink" }}>CUTE</span>
+          EXE
+          <span className={styles.cute}>CUTE</span>
         </Text>
       </Box>
     </Center>

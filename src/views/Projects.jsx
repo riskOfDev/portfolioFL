@@ -8,6 +8,7 @@ const Projects = () => {
       type: "APP MOBILE DESIGN",
       name: '"Sannabis"',
       thumbnail: "sannabis.png",
+      generalLink: "https://www.google.com",
       links: {
         behance: "https://www.google.com",
         figma: "https://www.google.com",
@@ -17,6 +18,7 @@ const Projects = () => {
       type: "WEB DESIGN",
       name: '"riskOfDev"',
       thumbnail: "riskofdev.png",
+      generalLink: "",
       links: {
         github: "https://www.google.com",
         demo: "https://www.google.com",
@@ -28,6 +30,7 @@ const Projects = () => {
       type: "APP MOBILE DESIGN",
       name: '"Ta-Da"',
       thumbnail: "ta-da.png",
+      generalLink: "",
       links: {
         github: "https://www.google.com",
         demo: "https://www.google.com",
@@ -51,6 +54,7 @@ const Projects = () => {
           name={project.name}
           thumbnail={project.thumbnail}
           links={project.links}
+          generalLink={project.generalLink}
         />
       ))}
     </>

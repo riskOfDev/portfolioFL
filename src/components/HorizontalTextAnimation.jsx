@@ -11,9 +11,13 @@ const titleStyle = {
   transition: "transform 0.3s ease-in-out",
 };
 
-const HorizontalTextAnimation = ({ text, defaultDirection = "right" }) => {
+const HorizontalTextAnimation = ({
+  text,
+  defaultDirection = "right",
+  defaultOffset = 0,
+}) => {
   const [scrollPosition, setScrollPosition] = useState(0);
-  const [translateX, setTranslateX] = useState(0);
+  const [translateX, setTranslateX] = useState(defaultOffset);
 
   useEffect(() => {
     const handleScroll = () => {
