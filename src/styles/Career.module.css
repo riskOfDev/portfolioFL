@@ -4,6 +4,7 @@
   text-orientation: upright;
   font-size: 60px;
   /* Adjust as needed */
+  font-family: "Inter";
 }
 
 .verticalLettersRight {
@@ -24,6 +25,7 @@
 
 .mainContent {
   font-size: 34px;
+  font-weight: 500;
   /* Adjust as needed */
   margin: 0 20px;
   /* Adjust as needed */

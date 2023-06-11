@@ -8,7 +8,7 @@ import Projects from "../views/Projects";
 import ContactMe from "../views/ContactMe";
 import Footer from "../views/Footer";
 import Career from "../views/Career";
-import Banner from "../views/Banner";
+import styles from "../styles/Index.module.css";
 
 export default function Home() {
   return (
@@ -19,7 +19,10 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main style={{ backgroundColor: "#F7E7FF" }}>
+      <main
+        className={styles.background}
+        // style={{ backgroundColor: "#F7E7FF" }}
+      >
         <Navbar />
         <div style={{ height: "80px" }}></div>
         <Hero />

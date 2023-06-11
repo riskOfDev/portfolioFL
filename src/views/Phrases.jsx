@@ -34,8 +34,9 @@ const Phrases = () => {
     <Center
       h="100vh"
       style={{
+        fontFamily: "Inter",
         background:
-          "radial-gradient(circle at center center, rgb(237 201 255) 0%, white 46%)",
+          "radial-gradient(circle at center, rgba(237, 201, 255, 1) 0%, rgba(237, 201, 255, 0) 56%)",
       }}
     >
       <Box textAlign="center">
