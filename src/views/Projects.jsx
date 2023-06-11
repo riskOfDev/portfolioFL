@@ -39,8 +39,10 @@ const Projects = () => {
 
   return (
     <>
-      <h1>MY PROJECTS</h1>
-      <h2>CHECK OUT MY WORK</h2>
+      <div style={{ textAlign: "center", fontSize: "36px" }}>
+        <h1>MY PROJECTS</h1>
+        <h2>CHECK OUT MY WORK</h2>
+      </div>
       {projects.map((project, index) => (
         <Project
           key={index}

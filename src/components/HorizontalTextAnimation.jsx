@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 const titleStyle = {
   fontFamily: "var(--font-primary)",
   color: "black",
-  fontSize: "15px",
+  fontSize: "36px",
   zIndex: 1,
   margin: 0,
   whiteSpace: "nowrap",
