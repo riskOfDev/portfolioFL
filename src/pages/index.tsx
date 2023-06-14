@@ -8,7 +8,6 @@ import Projects from "../views/Projects";
 import ContactMe from "../views/ContactMe";
 import Footer from "../views/Footer";
 import Career from "../views/Career";
-import HoverEffect from "../components/HoverEffect";
 import styles from "../styles/Index.module.css";
 
 export default function Home() {
@@ -21,13 +20,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main
-        className={styles.background}
-        // style={{ backgroundColor: "#F7E7FF" }}
+        // className={styles.background}
+        style={{ background: "rgba(255, 255, 255, 0.5)" }}
       >
         <Navbar />
-        <HoverEffect />
 
-        <div style={{ height: "80px" }}></div>
+        {/* <div style={{ height: "80px" }}></div> */}
         <Hero />
         <Phrases />
         <Career />

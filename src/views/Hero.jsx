@@ -1,10 +1,13 @@
 import React from "react";
 import styles from "../styles/Hero.module.css";
 import Image from "next/image";
+import HoverEffect from "../components/HoverEffect";
 
 const Hero = () => {
   return (
-    <>
+    <div style={{ position: "relative" }}>
+      <HoverEffect />
+
       <div className={styles.container} style={{ height: "100vh" }}>
         <div className={styles.title}>
           <h1>HELLO, I'M FLORENCIA</h1>
@@ -52,7 +55,7 @@ const Hero = () => {
           </ul>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -36,7 +36,7 @@ const Phrases = () => {
       style={{
         fontFamily: "Inter",
         background:
-          "radial-gradient(circle at center, rgba(237, 201, 255, 1) 0%, rgba(237, 201, 255, 0) 56%)",
+          "radial-gradient(circle at center, rgba(237, 201, 255, 1) 0%, rgba(237, 201, 255, 0) 41%)",
       }}
     >
       <Box textAlign="center">

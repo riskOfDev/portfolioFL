@@ -31,9 +31,18 @@ const HoverEffect = () => {
   }, []);
 
   return (
-    <div className={styles.container} ref={containerRef}>
+    <div
+      className={styles.container}
+      ref={containerRef}
+      style={{ position: "absolute", zIndex: -1 }}
+    >
       <div className={styles.backgroundOne} />
-      <div className={styles.backgroundTwo} />
+      <div className={styles.backgroundTwo}>
+        <video autoPlay loop muted>
+          {/* <source src="/hero-background/pexels2.mp4" type="video/mp4" /> */}
+          <source src="/hero-background/pexels4.mp4" type="video/mp4" />
+        </video>
+      </div>
     </div>
   );
 };
