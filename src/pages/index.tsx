@@ -20,13 +20,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main
-        // className={styles.background}
+        // className={styles.background}LET'S GET IN TOUCH
         style={{ background: "rgba(255, 255, 255, 0.5)" }}
       >
         <Navbar />
 
-        {/* <div style={{ height: "80px" }}></div> */}
         <Hero />
+
         <Phrases />
         <Career />
         <Projects />

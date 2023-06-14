@@ -49,6 +49,7 @@ const LetsGetInTouch = () => {
           animate={inView ? "show" : "hidden"}
           key={i}
           style={{
+            fontFammily: "Inter",
             fontSize: "110px",
             color: color,
             WebkitTextFillColor: borderWidth === "0px" ? color : "transparent",

@@ -16,6 +16,11 @@
   /* background: rgba(255, 255, 255, 0.2); */
 }
 
+.backgroundOneHover {
+  background-image: linear-gradient(to bottom, transparent, white);
+}
+
+
 .backgroundTwo {
   position: absolute;
   width: 100%;
@@ -27,4 +32,25 @@
   -webkit-mask-repeat: no-repeat;
   /* Apply the purple filter */
   filter: brightness(2.2) hue-rotate(250deg);
+}
+
+.backgroundTwoHover {
+  background-image: linear-gradient(to bottom, transparent, white);
+  -webkit-box-shadow: inset 0px 0px 50px 30px #FFFFFF;
+  box-shadow: inset 0px 0px 50px 30px #FFFFFF;
+}
+
+.video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+  background-size: cover;
+  transition: 1s opacity;
+  object-fit: cover;
 }
