@@ -31,54 +31,53 @@ const Phrases = () => {
   }, [inView]);
 
   return (
-    <Center
-      h="100vh"
-      style={{
-        fontFamily: "Inter",
-        background:
-          "radial-gradient(circle at center, rgba(237, 201, 255, 1) 0%, rgba(237, 201, 255, 0) 41%)",
-      }}
-    >
-      <Box textAlign="center">
-        <Text
-          fontSize="8xl"
-          fontWeight="bold"
-          mb="8"
-          ref={ref}
-          style={{
-            opacity: isVisible[0] ? 1 : 0,
-            transition: "opacity 0.5s ease-in-out",
-          }}
-        >
-          EM<u>P</u>H<u>A</u>THIZE
-        </Text>
-        <Text
-          fontSize="8xl"
-          fontWeight="bold"
-          mb="8"
-          ref={ref}
-          style={{
-            opacity: isVisible[1] ? 1 : 0,
-            transition: "opacity 0.5s ease-in-out",
-          }}
-        >
-          IDE<u>A</u>TE
-        </Text>
-        <Text
-          fontSize="8xl"
-          fontWeight="bold"
-          mb="8"
-          ref={ref}
-          style={{
-            opacity: isVisible[2] ? 1 : 0,
-            transition: "opacity 0.5s ease-in-out",
-          }}
-        >
-          EXE
-          <span className={styles.cute}>CUTE</span>
-        </Text>
-      </Box>
-    </Center>
+    <div className={styles.wrap}>
+      <Center
+        h="100vh"
+        style={{
+          fontFamily: "Inter",
+          background:
+            "radial-gradient(circle at center, rgba(237, 201, 255, 1) 0%, rgba(237, 201, 255, 0) 41%)",
+        }}
+      >
+        <Box textAlign="center">
+          <Text
+            fontWeight="bold"
+            mb="8"
+            ref={ref}
+            style={{
+              opacity: isVisible[0] ? 1 : 0,
+              transition: "opacity 0.5s ease-in-out",
+            }}
+          >
+            EM<u>P</u>H<u>A</u>THIZE
+          </Text>
+          <Text
+            fontWeight="bold"
+            mb="8"
+            ref={ref}
+            style={{
+              opacity: isVisible[1] ? 1 : 0,
+              transition: "opacity 0.5s ease-in-out",
+            }}
+          >
+            IDE<u>A</u>TE
+          </Text>
+          <Text
+            fontWeight="bold"
+            mb="8"
+            ref={ref}
+            style={{
+              opacity: isVisible[2] ? 1 : 0,
+              transition: "opacity 0.5s ease-in-out",
+            }}
+          >
+            EXE
+            <span className={styles.cute}>CUTE</span>
+          </Text>
+        </Box>
+      </Center>
+    </div>
   );
 };
 

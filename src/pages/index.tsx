@@ -8,6 +8,7 @@ import Projects from "../views/Projects";
 import ContactMe from "../views/ContactMe";
 import Footer from "../views/Footer";
 import Career from "../views/Career";
+import Loading from "../views/Loading";
 import styles from "../styles/Index.module.css";
 
 export default function Home() {
@@ -23,6 +24,7 @@ export default function Home() {
         // className={styles.background}LET'S GET IN TOUCH
         style={{ background: "rgba(255, 255, 255, 0.5)" }}
       >
+        <Loading />
         <Navbar />
 
         <Hero />

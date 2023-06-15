@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@500&display=swap');
 
-
 .container {
     display: grid;
     grid-template-columns: 1fr;
@@ -82,7 +81,6 @@
     right: 0;
     top: 35%;
     transform: translateY(-50%);
-
 }
 
 .socialMedia ul {
@@ -92,4 +90,31 @@
 
 .socialMedia ul li {
     margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 688px) {
+    .title h1 {
+        font-size: 25px;
+    }
+
+    .title h2 {
+        font-size: 20px;
+    }
+
+    .motto {
+        font-size: 7vh;
+    }
+
+    .socialMedia ul li {
+        margin-bottom: 20px;
+        width: 80%;
+        height: 80%;
+    }
+
+    /* Add your icon resizing code here, assuming you have a .icon class for your icons */
+    .icon {
+        /* You'll need to define what 'smaller' means for your icons. 
+           Here's an example that makes them 50% of the original size. */
+        transform: scale(0.5);
+    }
 }
