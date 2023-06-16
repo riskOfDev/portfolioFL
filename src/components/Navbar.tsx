@@ -21,11 +21,12 @@ const Navbar = () => {
       justify="space-between"
       px={{ base: "6", lg: "16" }}
       position="fixed"
+      zIndex="999"
     >
       <ChakraNextImage src="/images/logo.png" alt="logo" w="34px" h="46px" />
       <Flex gap="14" display={{ base: "none", lg: "flex" }}>
-        <NavbarLinkScroll path="about" text="About" size="3xl" />
-        <NavbarLinkScroll path="proyects" text="Proyects" size="3xl" />
+        <NavbarLinkScroll path="career" text="About" size="3xl" />
+        <NavbarLinkScroll path="projects" text="Projects" size="3xl" />
         <NavbarLinkScroll path="contact" text="Contact" size="3xl" />
       </Flex>
 

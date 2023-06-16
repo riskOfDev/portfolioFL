@@ -42,7 +42,7 @@ const Projects = () => {
 
   return (
     <>
-      <div style={{ textAlign: "center", fontSize: "36px" }}>
+      <div style={{ textAlign: "center", fontSize: "36px" }} id="projects">
         <h1>MY PROJECTS</h1>
         <h2>CHECK OUT MY WORK</h2>
       </div>

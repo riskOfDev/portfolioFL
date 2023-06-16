@@ -6,7 +6,7 @@ import { Link } from "react-scroll";
 type Props = {
   path: string;
   text: string;
-  size?: string
+  size?: string;
 };
 
 const NavbarLinkScroll: React.FC<Props> = ({ path, text, size }) => {
@@ -19,9 +19,16 @@ const NavbarLinkScroll: React.FC<Props> = ({ path, text, size }) => {
         spy={true}
         smooth={true}
         duration={500}
-        cursor='pointer'
+        cursor="pointer"
       >
-        <Text fontSize={size} fontWeight="bold" _hover={{color: "primary"}} transition="0.15s ease">{text}</Text>
+        <Text
+          fontSize={size}
+          fontWeight="bold"
+          _hover={{ color: "primary" }}
+          transition="0.15s ease"
+        >
+          {text}
+        </Text>
       </Box>
     </>
   );

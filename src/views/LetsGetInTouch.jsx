@@ -1,6 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import styles from "../styles/LetsGetInTouch.module.css";
+
+// @import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
 
 const LetsGetInTouch = () => {
   const { ref, inView } = useInView({
@@ -40,7 +43,7 @@ const LetsGetInTouch = () => {
   };
 
   return (
-    <div ref={ref} style={{ textAlign: "center" }}>
+    <div ref={ref} className={styles.wrap} style={{ textAlign: "center" }}>
       {texts.map(({ text, color, borderWidth }, i) => (
         <motion.div
           custom={i}

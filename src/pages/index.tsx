@@ -21,21 +21,21 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main
-        // className={styles.background}LET'S GET IN TOUCH
-        style={{ background: "rgba(255, 255, 255, 0.5)" }}
+      // className={styles.background}
+      // style={{ background: "rgba(255, 255, 255, 0.5)" }}
       >
-        <Loading />
+        {/* <Loading /> */}
         <Navbar />
-
         <Hero />
-
         <Phrases />
-        <Career />
-        <Projects />
-        <Crazy />
-        <LetsGetInTouch />
-        <ContactMe />
-        <Footer />
+        <div className={styles.background}>
+          <Career />
+          <Projects />
+          <Crazy />
+          <LetsGetInTouch />
+          <ContactMe />
+          <Footer />
+        </div>
       </main>
     </>
   );
