@@ -1,0 +1,22 @@
+.ideas {
+  font-size: 60px;
+}
+
+.wanna {
+  font-size: 60px;
+  text-align: right;
+}
+
+.contact {
+  font-size: 100px;
+  font-family: "Inter";
+  font-size: "110px";
+  color: transparent;
+  -webkit-text-fill-color: "transparent";
+  -webkit-text-stroke: 1px black;
+}
+
+.ideas span {
+  color: #8F00FF;
+  text-decoration: underline;
+}

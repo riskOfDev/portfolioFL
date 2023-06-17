@@ -30,7 +30,7 @@ const Hero = () => {
           <div className={styles.socialMedia}>
             <ul>
               <li>
-                <a href="florencialopez271100@gmail.com">
+                <a href="florencialopez271100@gmail.com" target="_blank">
                   <Image
                     alt="mail"
                     width="50"
@@ -40,7 +40,10 @@ const Hero = () => {
                 </a>
               </li>
               <li>
-                <a href="https://www.behance.net/florencialpez5">
+                <a
+                  href="https://www.behance.net/florencialpez5"
+                  target="_blank"
+                >
                   <Image
                     alt="behance"
                     width="50"
@@ -50,7 +53,10 @@ const Hero = () => {
                 </a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/in/florencia-l%C3%B3pez-uxui/">
+                <a
+                  href="https://www.linkedin.com/in/florencia-l%C3%B3pez-uxui/"
+                  target="_blank"
+                >
                   <Image
                     alt="linkedin"
                     width="50"

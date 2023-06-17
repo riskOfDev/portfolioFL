@@ -1,15 +1,22 @@
 import React from "react";
+import styles from "../styles/ContactMe.module.css";
 
 const ContactMe = () => {
   return (
     <div id="contact">
-      <div>WANNA SEND ME A MESSAGE?</div>
+      {/* Linea */}
+      <div></div>
+      <div className={styles.wanna}>
+        WANNA SEND <br /> ME A MESSAGE?
+      </div>
       <div>
-        <div>
-          SEND ME YOUR <span>IDEAS</span>
+        <div className={styles.ideas}>
+          SEND ME <br />
+          YOUR <span>IDEAS</span>
+          <div> {`>>>>`} </div>
         </div>
         <div>
-          <h1>CONTACT</h1>
+          <h1 className={styles.contact}>CONTACT</h1>
           <ul>
             <li>EMAIL</li>
             <li>LINKEDIN</li>

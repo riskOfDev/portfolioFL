@@ -4,6 +4,7 @@ import { Box, Flex, Heading, Link } from "@chakra-ui/react";
 import DOMPurify from "isomorphic-dompurify";
 import emojis from "./readmos/emojis";
 import TiltImage from "./TiltImage";
+import styles from "../../styles/ProjectDef.module.css";
 
 const Project = ({ type, name, thumbnail, links, number, generalLink }) => {
   const [open, setOpen] = useState(false);
@@ -27,11 +28,11 @@ const Project = ({ type, name, thumbnail, links, number, generalLink }) => {
 
       <Box ml={number % 2 ? "30px" : "0px"} className="textContent">
         {/* Name and type */}
-        <Box>
+        <Box className={styles.titles}>
           <Heading as="h1" fontSize="5xl">
             {type}
           </Heading>
-          <Heading as="h2" fontSize="5xl" mt={1}>
+          <Heading as="h2" fontSize="5xl" mt={1} color="#9E9E9E">
             {name}
           </Heading>
         </Box>

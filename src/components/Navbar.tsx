@@ -14,7 +14,7 @@ const Navbar = () => {
 
   return (
     <Flex
-      bg="transparent"
+      bg="linear-gradient(180deg, rgb(196 130 220) 0%, rgb(165 111 173) -13%, rgba(247,231,255,0) 95%)"
       w="100%"
       minH="100px"
       align="center"

@@ -1,6 +1,7 @@
 import React from "react";
 import ProjectReadmos from "../components/Projects/ProjectReadmos";
 import Project from "../components/Projects/Project";
+import styles from "../styles/ProjectsDef.module.css";
 
 const Projects = () => {
   const projects = [
@@ -42,7 +43,15 @@ const Projects = () => {
 
   return (
     <>
-      <div style={{ textAlign: "center", fontSize: "36px" }} id="projects">
+      <div
+        className={styles.titles}
+        style={{
+          textAlign: "center",
+          fontSize: "36px",
+          paddingBottom: "60px",
+        }}
+        id="projects"
+      >
         <h1>MY PROJECTS</h1>
         <h2>CHECK OUT MY WORK</h2>
       </div>
