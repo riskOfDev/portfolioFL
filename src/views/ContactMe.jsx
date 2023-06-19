@@ -7,20 +7,36 @@ const ContactMe = () => {
       {/* Linea */}
       <div></div>
       <div className={styles.wanna}>
+        <img className={styles.line} src="/footer/line.png"></img>
+        <br />
         WANNA SEND <br /> ME A MESSAGE?
       </div>
       <div>
-        <div className={styles.ideas}>
-          SEND ME <br />
-          YOUR <span>IDEAS</span>
-          <div> {`>>>>`} </div>
+        <div>
+          <div className={styles.ideas}>
+            SEND ME YOUR <span className={styles.ideasWord}>IDEAS</span>
+            <span className={styles.flechas}>
+              <span style={{ color: "rgba(143, 0, 255, 0.2)" }}>{`>`}</span>
+              <span style={{ color: "rgba(143, 0, 255, 0.3)" }}>{`>`}</span>
+              <span style={{ color: "rgba(143, 0, 255, 0.4)" }}>{`>`}</span>
+              <span style={{ color: "rgba(143, 0, 255, 1)" }}>{`>`}</span>
+            </span>
+            <span>
+              <h1 className={styles.contact}>CONTACT</h1>
+            </span>
+          </div>
         </div>
         <div>
-          <h1 className={styles.contact}>CONTACT</h1>
-          <ul>
-            <li>EMAIL</li>
-            <li>LINKEDIN</li>
-            <li>BEHANCE</li>
+          <ul className={styles.contactList}>
+            <a href="mailto: florencialopez271100@gmail.com">
+              <li>EMAIL</li>
+            </a>
+            <a href="">
+              <li>LINKEDIN</li>
+            </a>
+            <a href="">
+              <li>BEHANCE</li>
+            </a>
           </ul>
         </div>
       </div>

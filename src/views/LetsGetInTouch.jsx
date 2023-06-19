@@ -16,19 +16,24 @@ const LetsGetInTouch = () => {
     { text: "LET'S GET IN TOUCH", color: "#AD00FF", borderWidth: "1px" },
     {
       text: "LET'S GET IN TOUCH",
-      color: "rgba(173, 0, 255, 0.9)",
+      color: "rgba(173, 0, 255, 0.4)",
       borderWidth: "1px",
     },
     {
       text: "LET'S GET IN TOUCH",
-      color: "rgba(173, 0, 255, 0.8)",
+      color: "rgba(173, 0, 255, 0.3)",
       borderWidth: "1px",
     },
     {
       text: "LET'S GET IN TOUCH",
-      color: "rgba(173, 0, 255, 0.7)",
+      color: "rgba(173, 0, 255, 0.2)",
       borderWidth: "1px",
     },
+    // {
+    //   text: "LET'S GET IN TOUCH",
+    //   color: "rgba(173, 0, 255, 0.1)",
+    //   borderWidth: "1px",
+    // },
   ];
 
   const variants = {
@@ -52,7 +57,6 @@ const LetsGetInTouch = () => {
           animate={inView ? "show" : "hidden"}
           key={i}
           style={{
-            fontFammily: "Inter",
             fontSize: "110px",
             color: color,
             WebkitTextFillColor: borderWidth === "0px" ? color : "transparent",

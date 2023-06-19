@@ -50,7 +50,7 @@ const Phrases = () => {
               transition: "opacity 0.5s ease-in-out",
             }}
           >
-            EM<u>P</u>H<u>A</u>THIZE
+            EM<u>P</u>ATHIZE
           </Text>
           <Text
             fontWeight="bold"
