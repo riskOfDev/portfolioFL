@@ -10,7 +10,7 @@ const Navbar = () => {
 
   const variants = {
     hidden: { opacity: 0 },
-    show: (i) => ({
+    show: (i: any) => ({
       opacity: 1,
       transition: {
         delay: i * 0.4,
@@ -33,6 +33,7 @@ const Navbar = () => {
       <Flex gap="14" display={{ base: "none", lg: "flex" }}>
         {["home", "career", "projects", "contact"].map((path, i) => (
           <motion.div
+            key={i}
             variants={variants}
             custom={i}
             initial="hidden"
@@ -90,6 +91,7 @@ const Navbar = () => {
           <Flex align="center" flexDir="column" h="100%" w="100%" gap="10">
             {["home", "career", "projects", "contact"].map((path, i) => (
               <motion.div
+                key={i}
                 variants={variants}
                 custom={i}
                 initial="hidden"

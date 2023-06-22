@@ -48,7 +48,7 @@ const Hero = () => {
                 visible: { opacity: 1, transition: { duration: 0.5 } },
               }}
             >
-              <h1>HELLO, I'M FLORENCIA</h1>
+              <h1>HELLO, I&apos;M FLORENCIA</h1>
             </motion.div>
             <motion.div
               ref={designerRef}
