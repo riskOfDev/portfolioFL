@@ -1,9 +1,30 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "../styles/Hero.module.css";
 import Image from "next/image";
 import HoverEffect from "../components/HoverEffect";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const Hero = () => {
+  const helloControls = useAnimation();
+  const designerControls = useAnimation();
+  const { ref: helloRef, inView: helloInView } = useInView({
+    triggerOnce: true,
+  });
+  const { ref: designerRef, inView: designerInView } = useInView({
+    triggerOnce: true,
+  });
+
+  useEffect(() => {
+    if (helloInView) {
+      setTimeout(() => {
+        helloControls.start("visible").then(() => {
+          designerControls.start("visible");
+        });
+      }, 1350); // Delay both animations by 1 second
+    }
+  }, [helloControls, helloInView, designerControls]);
+
   return (
     <div
       style={{
@@ -18,8 +39,29 @@ const Hero = () => {
           <div style={{ height: "80px" }}></div>
 
           <div className={styles.title}>
-            <h1>HELLO, I'M FLORENCIA</h1>
-            <h2>UX/UI DESIGNER</h2>
+            <motion.div
+              ref={helloRef}
+              initial="hidden"
+              animate={helloControls}
+              variants={{
+                hidden: { opacity: 0 },
+                visible: { opacity: 1, transition: { duration: 0.5 } },
+              }}
+            >
+              <h1>HELLO, I'M FLORENCIA</h1>
+            </motion.div>
+            <motion.div
+              ref={designerRef}
+              initial="hidden"
+              animate={designerControls}
+              variants={{
+                hidden: { opacity: 0 },
+                visible: { opacity: 1, transition: { duration: 0.5 } },
+              }}
+              transition={{ delay: 0.5 }} // Delay the fade-in of h2 by 0.5 seconds
+            >
+              <h2>UX/UI DESIGNER</h2>
+            </motion.div>
           </div>
 
           <div>

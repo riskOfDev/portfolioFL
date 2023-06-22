@@ -3,8 +3,6 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import styles from "../styles/LetsGetInTouch.module.css";
 
-// @import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
-
 const LetsGetInTouch = () => {
   const { ref, inView } = useInView({
     threshold: 0.1,
@@ -52,7 +50,6 @@ const LetsGetInTouch = () => {
           animate={inView ? "show" : "hidden"}
           key={i}
           style={{
-            fontSize: "110px",
             color: color,
             WebkitTextFillColor: borderWidth === "0px" ? color : "transparent",
             WebkitTextStroke: `${borderWidth} ${color}`,

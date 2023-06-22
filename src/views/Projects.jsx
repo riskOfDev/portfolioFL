@@ -2,6 +2,8 @@ import React from "react";
 import ProjectReadmos from "../components/Projects/ProjectReadmos";
 import Project from "../components/Projects/Project";
 import styles from "../styles/ProjectsDef.module.css";
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
 const Projects = () => {
   const projects = [
@@ -40,10 +42,24 @@ const Projects = () => {
       },
     },
   ];
+  const { ref, inView } = useInView({
+    triggerOnce: true, // Change this to false if you want the animation to trigger again whenever it comes in view
+  });
+
+  const variants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
 
   return (
     <>
       <div
+        ref={ref}
         className={styles.titles}
         style={{
           textAlign: "center",
@@ -52,8 +68,20 @@ const Projects = () => {
         }}
         id="projects"
       >
-        <h1>MY PROJECTS</h1>
-        <h2>CHECK OUT MY WORK</h2>
+        <motion.h1
+          variants={variants}
+          initial="hidden"
+          animate={inView ? "show" : "hidden"}
+        >
+          MY PROJECTS
+        </motion.h1>
+        <motion.h2
+          variants={variants}
+          initial="hidden"
+          animate={inView ? "show" : "hidden"}
+        >
+          CHECK OUT MY WORK
+        </motion.h2>
       </div>
       {projects.map((project, index) => (
         <Project

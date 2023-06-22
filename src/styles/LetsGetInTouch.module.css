@@ -4,4 +4,23 @@
 .wrap {
   font-family: 'Inter', sans-serif;
   font-weight: 800;
+  font-size: 110px;
+}
+
+@media (max-width: 1160px) {
+  .wrap {
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 887px) {
+  .wrap {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 556px) {
+  .wrap {
+    font-size: 30px;
+  }
 }

@@ -67,9 +67,14 @@ const Career = () => {
           }}
           className={styles.mainContent}
         >
-          I'm a digital enthusiast, obssesed with delivering immaculate
+          I am a digital enthusiast, obssesed with delivering immaculate
           <br />
-          products that deliver transformative user experiences.
+          products that brings transformative user experiences.
+          <br />
+          I hold a certification as a UI/UX Designer from Coderhouse.
+          <br />
+          Currently, I am working as a UI/UX Designer at riskOfDev ( since
+          February 2023 ) ( Ad honorem )
         </MotionBox>
 
         <MotionBox
