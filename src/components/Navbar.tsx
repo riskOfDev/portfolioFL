@@ -5,9 +5,6 @@ import NavbarLinkScroll from "./NavbarLinkScroll";
 import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
 import { motion } from "framer-motion";
 
-// z-index: 999;
-// background-color: white;
-
 const Navbar = () => {
   const { getButtonProps, getDisclosureProps, isOpen } = useDisclosure();
   const [hidden, setHidden] = useState(!isOpen);
@@ -74,8 +71,8 @@ const Navbar = () => {
       >
         <Flex flexDir="column" h="100%" w="100%" pb="20" pt="32">
           <Flex align="center" flexDir="column" h="100%" w="100%" gap="10">
-            <NavbarLinkScroll path="about" text="About" size="5xl" />
-            <NavbarLinkScroll path="proyects" text="Proyects" size="5xl" />
+            <NavbarLinkScroll path="career" text="About" size="5xl" />
+            <NavbarLinkScroll path="projects" text="Projects" size="5xl" />
             <NavbarLinkScroll path="contact" text="Contact" size="5xl" />
           </Flex>
           <Flex align="end" justify="center" w="100%">

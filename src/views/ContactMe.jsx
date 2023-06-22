@@ -1,9 +1,33 @@
 import React from "react";
 import styles from "../styles/ContactMe.module.css";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
+const variants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 1 } },
+};
 
 const ContactMe = () => {
+  const controls = useAnimation();
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
+
+  React.useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
   return (
-    <div id="contact">
+    <motion.div
+      id="contact"
+      variants={variants}
+      initial="hidden"
+      animate={controls}
+      ref={ref}
+    >
       {/* Linea */}
       <div></div>
       <div className={styles.wanna}>
@@ -28,19 +52,27 @@ const ContactMe = () => {
         </div>
         <div>
           <ul className={styles.contactList}>
-            <a href="mailto: florencialopez271100@gmail.com">
-              <li>EMAIL</li>
-            </a>
-            <a href="">
-              <li>LINKEDIN</li>
-            </a>
-            <a href="">
-              <li>BEHANCE</li>
-            </a>
+            <li>
+              <a href="mailto: florencialopez271100@gmail.com">EMAIL </a>
+            </li>
+
+            <li>
+              <a
+                href="https://www.linkedin.com/in/florencia-l%C3%B3pez-uxui/"
+                target="_blank"
+              >
+                LINKEDIN
+              </a>
+            </li>
+            <li>
+              <a href="https://www.behance.net/florencialpez5" target="_blank">
+                BEHANCE
+              </a>
+            </li>
           </ul>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
