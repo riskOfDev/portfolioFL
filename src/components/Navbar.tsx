@@ -1,5 +1,5 @@
 import { Button, Flex, useDisclosure } from "@chakra-ui/react";
-import React, { useState } from "react";
+import React from "react";
 import ChakraNextImage from "./ChakraNextImage";
 import NavbarLinkScroll from "./NavbarLinkScroll";
 import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
@@ -7,7 +7,16 @@ import { motion } from "framer-motion";
 
 const Navbar = () => {
   const { getButtonProps, getDisclosureProps, isOpen } = useDisclosure();
-  const [hidden, setHidden] = useState(!isOpen);
+
+  const variants = {
+    hidden: { opacity: 0 },
+    show: (i) => ({
+      opacity: 1,
+      transition: {
+        delay: i * 0.4,
+      },
+    }),
+  };
 
   return (
     <Flex
@@ -22,9 +31,20 @@ const Navbar = () => {
     >
       <ChakraNextImage src="/images/logo.png" alt="logo" w="34px" h="46px" />
       <Flex gap="14" display={{ base: "none", lg: "flex" }}>
-        <NavbarLinkScroll path="career" text="About" size="3xl" />
-        <NavbarLinkScroll path="projects" text="Projects" size="3xl" />
-        <NavbarLinkScroll path="contact" text="Contact" size="3xl" />
+        {["home", "career", "projects", "contact"].map((path, i) => (
+          <motion.div
+            variants={variants}
+            custom={i}
+            initial="hidden"
+            animate="show"
+          >
+            <NavbarLinkScroll
+              path={path}
+              text={path.charAt(0).toUpperCase() + path.slice(1)}
+              size="3xl"
+            />
+          </motion.div>
+        ))}
       </Flex>
 
       {/* NAVBAR MOBILE */}
@@ -54,10 +74,7 @@ const Navbar = () => {
       <Flex
         as={motion.div}
         {...getDisclosureProps()}
-        hidden={hidden}
         initial={false}
-        onAnimationStart={() => setHidden(false)}
-        onAnimationComplete={() => setHidden(false)}
         animate={{ width: isOpen ? "100vw" : "0" }}
         display={{ md: "none" }}
         flexDirection="column"
@@ -71,9 +88,20 @@ const Navbar = () => {
       >
         <Flex flexDir="column" h="100%" w="100%" pb="20" pt="32">
           <Flex align="center" flexDir="column" h="100%" w="100%" gap="10">
-            <NavbarLinkScroll path="career" text="About" size="5xl" />
-            <NavbarLinkScroll path="projects" text="Projects" size="5xl" />
-            <NavbarLinkScroll path="contact" text="Contact" size="5xl" />
+            {["home", "career", "projects", "contact"].map((path, i) => (
+              <motion.div
+                variants={variants}
+                custom={i}
+                initial="hidden"
+                animate="show"
+              >
+                <NavbarLinkScroll
+                  path={path}
+                  text={path.charAt(0).toUpperCase() + path.slice(1)}
+                  size="5xl"
+                />
+              </motion.div>
+            ))}
           </Flex>
           <Flex align="end" justify="center" w="100%">
             <ChakraNextImage

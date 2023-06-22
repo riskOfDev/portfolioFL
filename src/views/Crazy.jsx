@@ -40,7 +40,9 @@ const Crazy = () => {
           padding: "20px",
         }}
       >
-        <motion.div style={{ marginRight: "10px", translateY: translateY1 }}>
+        <motion.div
+          style={{ marginRight: "10px", translateY: translateY1, zIndex: "1" }}
+        >
           <Image
             src={`/crazy/group7.png`}
             width={150}

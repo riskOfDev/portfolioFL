@@ -9,6 +9,7 @@ const Hero = () => {
       style={{
         backgroundImage: "linear-gradient(to bottom, transparent, white)",
       }}
+      id="home"
     >
       <div style={{ position: "relative" }}>
         <HoverEffect />

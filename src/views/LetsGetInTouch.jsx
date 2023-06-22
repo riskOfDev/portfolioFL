@@ -29,11 +29,6 @@ const LetsGetInTouch = () => {
       color: "rgba(173, 0, 255, 0.2)",
       borderWidth: "1px",
     },
-    // {
-    //   text: "LET'S GET IN TOUCH",
-    //   color: "rgba(173, 0, 255, 0.1)",
-    //   borderWidth: "1px",
-    // },
   ];
 
   const variants = {
@@ -41,8 +36,8 @@ const LetsGetInTouch = () => {
     show: (i) => ({
       opacity: 1,
       transition: {
-        delay: i * 0.2, // Each element will start animating 0.5 second after the previous one
-        duration: 0.5,
+        delay: i * 0.5, // Each element will start animating 0.5 second after the previous one
+        duration: 1,
       },
     }),
   };

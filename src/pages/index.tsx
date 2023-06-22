@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Hero from "../views/Hero";
 import Phrases from "../views/Phrases";
@@ -12,6 +13,20 @@ import Loading from "../views/Loading";
 import styles from "../styles/Index.module.css";
 
 export default function Home() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const handleWindowLoad = () => setLoading(false);
+    window.addEventListener("load", handleWindowLoad);
+
+    // cleanup the event listener
+    return () => window.removeEventListener("load", handleWindowLoad);
+  }, []);
+
+  if (loading) {
+    return <Loading />;
+  }
+
   return (
     <>
       <Head>
@@ -20,11 +35,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main
-      // className={styles.background}
-      // style={{ background: "rgba(255, 255, 255, 0.5)" }}
-      >
-        {/* <Loading /> */}
+      <main>
         <Navbar />
         <Hero />
         <Phrases />
