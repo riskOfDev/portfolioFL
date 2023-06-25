@@ -105,9 +105,21 @@
         font-size: 7vh;
     }
 
+
+    .socialMedia {
+        top: 85%;
+        position: static;
+        align-items: center;
+    }
+
+    .socialMedia ul {
+        display: flex;
+    }
+
     .socialMedia ul li {
         margin-bottom: 20px;
         width: 80%;
+        padding: 10px;
         height: 80%;
     }
 

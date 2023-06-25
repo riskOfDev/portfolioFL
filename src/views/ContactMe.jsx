@@ -29,7 +29,6 @@ const ContactMe = () => {
       ref={ref}
     >
       {/* Linea */}
-      <div></div>
       <div className={styles.wanna}>
         <img className={styles.line} src="/footer/line.png"></img>
         <br />

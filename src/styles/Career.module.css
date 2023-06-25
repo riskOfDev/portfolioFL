@@ -30,3 +30,33 @@
   margin: 0 20px;
   /* Adjust as needed */
 }
+
+
+@media only screen and (max-width: 987px) {
+  .mainContent {
+    font-size: 20px;
+  }
+
+  .verticalLetters {
+    font-size: 45px;
+  }
+
+  .verticalLettersRight {
+    font-size: 45px;
+  }
+}
+
+
+@media only screen and (max-width: 987px) {
+  .mainContent {
+    font-size: 25px;
+  }
+
+}
+
+@media only screen and (max-width: 500px) {
+  .mainContent {
+    font-size: 15px;
+  }
+
+}

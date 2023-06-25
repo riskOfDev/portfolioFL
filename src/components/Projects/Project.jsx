@@ -86,6 +86,7 @@ const Project = ({ type, name, thumbnail, links, number, generalLink }) => {
                   },
                 }}
                 key={link}
+                className={links}
               >
                 {link === "github" && (
                   <Link
@@ -96,15 +97,16 @@ const Project = ({ type, name, thumbnail, links, number, generalLink }) => {
                     alignItems="center"
                     mr={4}
                     _hover={{ color: "blue.500" }}
+                    className={styles.linkItem}
                   >
                     <Image
                       src="/icons/github.svg"
                       alt="github"
                       width={30}
                       height={30}
-                      style={{ marginRight: "8px" }}
+                      className={styles.linkImage}
                     />
-                    Github
+                    <span className={styles.nameLinks}>Github</span>
                   </Link>
                 )}
                 {link === "demo" && (
@@ -122,9 +124,9 @@ const Project = ({ type, name, thumbnail, links, number, generalLink }) => {
                       alt="demo"
                       width={30}
                       height={30}
-                      style={{ marginRight: "8px" }}
+                      className={styles.linkImage}
                     />
-                    Live
+                    <span className={styles.nameLinks}>Live</span>
                   </Link>
                 )}
                 {link === "behance" && (
@@ -142,9 +144,9 @@ const Project = ({ type, name, thumbnail, links, number, generalLink }) => {
                       alt="behance"
                       width={30}
                       height={30}
-                      style={{ marginRight: "8px" }}
+                      className={styles.linkImage}
                     />
-                    Behance
+                    <span className={styles.nameLinks}>Behance</span>
                   </Link>
                 )}
                 {link === "figma" && (
@@ -162,9 +164,9 @@ const Project = ({ type, name, thumbnail, links, number, generalLink }) => {
                       alt="figma"
                       width={30}
                       height={30}
-                      style={{ marginRight: "8px" }}
+                      className={styles.linkImage}
                     />
-                    Figma
+                    <span className={styles.nameLinks}>Figma</span>
                   </Link>
                 )}
               </MotionBox>

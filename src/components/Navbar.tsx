@@ -3,10 +3,11 @@ import React from "react";
 import ChakraNextImage from "./ChakraNextImage";
 import NavbarLinkScroll from "./NavbarLinkScroll";
 import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
-  const { getButtonProps, getDisclosureProps, isOpen } = useDisclosure();
+  const { getButtonProps, getDisclosureProps, isOpen, onClose } =
+    useDisclosure();
 
   const variants = {
     hidden: { opacity: 0 },
@@ -16,6 +17,7 @@ const Navbar = () => {
         delay: i * 0.4,
       },
     }),
+    exit: { opacity: 0 },
   };
 
   return (
@@ -72,49 +74,56 @@ const Navbar = () => {
           <CloseIcon w="30px" h="30px" />
         )}
       </Button>
-      <Flex
-        as={motion.div}
-        {...getDisclosureProps()}
-        initial={false}
-        animate={{ width: isOpen ? "100vw" : "0" }}
-        display={{ md: "none" }}
-        flexDirection="column"
-        bg="#b78dea"
-        overflow="hidden"
-        position={isOpen ? "fixed" : "absolute"}
-        right="0"
-        top="0"
-        height="100vh"
-        zIndex="200"
-      >
-        <Flex flexDir="column" h="100%" w="100%" pb="20" pt="32">
-          <Flex align="center" flexDir="column" h="100%" w="100%" gap="10">
-            {["home", "career", "projects", "contact"].map((path, i) => (
-              <motion.div
-                key={i}
-                variants={variants}
-                custom={i}
-                initial="hidden"
-                animate="show"
-              >
-                <NavbarLinkScroll
-                  path={path}
-                  text={path.charAt(0).toUpperCase() + path.slice(1)}
-                  size="5xl"
+      <AnimatePresence>
+        {isOpen && (
+          <Flex
+            as={motion.div}
+            {...getDisclosureProps()}
+            initial={{ width: 0 }}
+            animate={{ width: "100vw" }}
+            exit={{ width: 0 }}
+            display={{ md: "none" }}
+            flexDirection="column"
+            bg="#b78dea"
+            overflow="hidden"
+            position={isOpen ? "fixed" : "absolute"}
+            right="0"
+            top="0"
+            height="100vh"
+            zIndex="200"
+          >
+            <Flex flexDir="column" h="100%" w="100%" pb="20" pt="32">
+              <Flex align="center" flexDir="column" h="100%" w="100%" gap="10">
+                {["home", "career", "projects", "contact"].map((path, i) => (
+                  <motion.div
+                    key={i}
+                    variants={variants}
+                    custom={i}
+                    initial="hidden"
+                    animate="show"
+                    exit="exit"
+                  >
+                    <NavbarLinkScroll
+                      path={path}
+                      text={path.charAt(0).toUpperCase() + path.slice(1)}
+                      size="5xl"
+                      onClose={onClose} // pass the onClose prop here
+                    />
+                  </motion.div>
+                ))}
+              </Flex>
+              <Flex align="end" justify="center" w="100%">
+                <ChakraNextImage
+                  src="/images/logo.png"
+                  alt="logo"
+                  w="34px"
+                  h="46px"
                 />
-              </motion.div>
-            ))}
+              </Flex>
+            </Flex>
           </Flex>
-          <Flex align="end" justify="center" w="100%">
-            <ChakraNextImage
-              src="/images/logo.png"
-              alt="logo"
-              w="34px"
-              h="46px"
-            />
-          </Flex>
-        </Flex>
-      </Flex>
+        )}
+      </AnimatePresence>
     </Flex>
   );
 };

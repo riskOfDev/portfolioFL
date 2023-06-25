@@ -6,12 +6,18 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 const Hero = () => {
+  const socialMediaControls = Array(3)
+    .fill(0)
+    .map(() => useAnimation());
   const helloControls = useAnimation();
   const designerControls = useAnimation();
   const { ref: helloRef, inView: helloInView } = useInView({
     triggerOnce: true,
   });
   const { ref: designerRef, inView: designerInView } = useInView({
+    triggerOnce: true,
+  });
+  const { ref: socialMediaRef, inView: socialMediaInView } = useInView({
     triggerOnce: true,
   });
 
@@ -21,9 +27,26 @@ const Hero = () => {
         helloControls.start("visible").then(() => {
           designerControls.start("visible");
         });
-      }, 1350); // Delay both animations by 1 second
+      }, 1350);
     }
-  }, [helloControls, helloInView, designerControls]);
+
+    if (socialMediaInView) {
+      setTimeout(() => {
+        // Add this setTimeout to delay the animations by 1 second
+        socialMediaControls.forEach((control, i) => {
+          setTimeout(() => {
+            control.start("visible");
+          }, i * 500); // delay each animation by 0.5 seconds
+        });
+      }, 1200);
+    }
+  }, [
+    helloControls,
+    helloInView,
+    designerControls,
+    socialMediaControls,
+    socialMediaInView,
+  ]);
 
   return (
     <div
@@ -70,44 +93,32 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className={styles.socialMedia}>
+          <div className={styles.socialMedia} ref={socialMediaRef}>
             <ul>
-              <li>
-                <a href="florencialopez271100@gmail.com" target="_blank">
-                  <Image
-                    alt="mail"
-                    width="50"
-                    height="50"
-                    src="/social/mail.png"
-                  />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.behance.net/florencialpez5"
-                  target="_blank"
-                >
-                  <Image
-                    alt="behance"
-                    width="50"
-                    height="50"
-                    src="/social/behance.png"
-                  />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/florencia-l%C3%B3pez-uxui/"
-                  target="_blank"
-                >
-                  <Image
-                    alt="linkedin"
-                    width="50"
-                    height="50"
-                    src="/social/linkedin.png"
-                  />
-                </a>
-              </li>
+              {[
+                "/social/mail.png",
+                "/social/behance.png",
+                "/social/linkedin.png",
+              ].map((src, i) => (
+                <li key={i}>
+                  <motion.a
+                    initial="hidden"
+                    animate={socialMediaControls[i]}
+                    variants={{
+                      hidden: { opacity: 0 },
+                      visible: { opacity: 1, transition: { duration: 0.5 } },
+                    }}
+                    transition={{ delay: i * 0.5 }} // Delay each fade-in by 0.5 seconds
+                  >
+                    <Image
+                      alt="social media"
+                      width="50"
+                      height="50"
+                      src={src}
+                    />
+                  </motion.a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

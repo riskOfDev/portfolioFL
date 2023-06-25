@@ -1,0 +1,23 @@
+.container {
+    width: 100%;
+    position: sticky;
+    top: 0;
+}
+
+.title {
+    font-family: var(--font-primary);
+    font-size: 13vh;
+    z-index: 1;
+    margin: 0;
+    white-space: nowrap;
+    margin-top: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 1393px) {
+    .title {
+        font-size: 10vh;
+    }
+
+
+}

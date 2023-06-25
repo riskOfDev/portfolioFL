@@ -29,6 +29,9 @@
 
 .ideas {
   padding-left: 14%;
+  line-height: 36px;
+  padding-top: 50px;
+  padding-bottom: 70px
 }
 
 .ideas span {
@@ -87,4 +90,85 @@
 
   /* This is necessary to keep the image and the text inline */
   /* The rest of your styles for the line image */
+}
+
+
+@media only screen and (max-width: 1194px) {
+  .contact {
+    font-size: 100px;
+    top: 39px;
+  }
+
+  .contactList {
+    top: -20px
+  }
+
+}
+
+@media only screen and (max-width: 888px) {
+  .contact {
+    font-size: 70px;
+    top: 39px;
+  }
+
+}
+
+@media only screen and (max-width: 714px) {
+  .contact {
+    font-size: 60px;
+    top: 15px;
+  }
+
+  .ideas {
+    font-size: 30px;
+  }
+
+  .ideas .flechas span {
+    font-size: 30px;
+  }
+
+  .wanna {
+    font-size: 30px;
+  }
+
+  .contactList {
+    font-size: 30px;
+  }
+
+  .contactList {
+    top: -50px
+  }
+
+}
+
+
+@media only screen and (max-width: 500px) {
+  .contact {
+    font-size: 30px;
+    top: 15px;
+  }
+
+  .ideas {
+    font-size: 15px;
+  }
+
+  .ideas .flechas span {
+    font-size: 15px;
+  }
+
+  .wanna {
+    font-size: 15px;
+  }
+
+  .contactList {
+    font-size: 15px;
+  }
+
+  .line {
+    border: 1px solid #8F00FF;
+    width: 300px;
+    height: 5px;
+    margin: 0 auto;
+  }
+
 }

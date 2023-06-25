@@ -7,9 +7,10 @@ type Props = {
   path: string;
   text: string;
   size?: string;
+  onClose?: () => void; // add this prop
 };
 
-const NavbarLinkScroll: React.FC<Props> = ({ path, text, size }) => {
+const NavbarLinkScroll: React.FC<Props> = ({ path, text, size, onClose }) => {
   const theme = useTheme();
   return (
     <Box
@@ -21,6 +22,7 @@ const NavbarLinkScroll: React.FC<Props> = ({ path, text, size }) => {
       cursor="pointer"
       position="relative"
       _hover={{ textDecoration: "none" }}
+      onClick={onClose} // close the menu on click
     >
       <Text
         as="span"

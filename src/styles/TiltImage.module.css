@@ -13,3 +13,11 @@
 .tiltContainer:hover .tilt {
     transform: rotateY(20deg);
 }
+
+
+@media only screen and (max-width: 489px) {
+
+    .tiltContainer {
+        width: 115px;
+    }
+}
