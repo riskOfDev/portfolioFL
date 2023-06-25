@@ -57,3 +57,11 @@
 .rainbow {
   animation: rainbow 4s linear infinite;
 }
+
+
+@media only screen and (max-width: 500px) {
+  .footerContainer {
+    padding-top: 0px;
+  }
+
+}

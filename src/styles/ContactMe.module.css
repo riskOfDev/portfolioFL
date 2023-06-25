@@ -150,6 +150,7 @@
 
   .ideas {
     font-size: 15px;
+    padding-left: 30px;
   }
 
   .ideas .flechas span {
@@ -162,6 +163,7 @@
 
   .contactList {
     font-size: 15px;
+    right: 154px;
   }
 
   .line {
