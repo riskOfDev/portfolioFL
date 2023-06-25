@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../styles/Hero.module.css";
 import Image from "next/image";
 import HoverEffect from "../components/HoverEffect";
@@ -6,9 +6,11 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 const Hero = () => {
-  const socialMediaControls = Array(3)
-    .fill(0)
-    .map(() => useAnimation());
+  const [socialMediaControls] = useState([
+    useAnimation(),
+    useAnimation(),
+    useAnimation(),
+  ]);
   const helloControls = useAnimation();
   const designerControls = useAnimation();
   const { ref: helloRef, inView: helloInView } = useInView({
