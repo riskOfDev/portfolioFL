@@ -13,20 +13,6 @@ import Loading from "../views/Loading";
 import styles from "../styles/Index.module.css";
 
 export default function Home() {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const handleWindowLoad = () => setLoading(false);
-    window.addEventListener("load", handleWindowLoad);
-
-    // cleanup the event listener
-    return () => window.removeEventListener("load", handleWindowLoad);
-  }, []);
-
-  if (loading) {
-    return <Loading />;
-  }
-
   return (
     <>
       <Head>
