@@ -8,37 +8,63 @@ import { motion } from "framer-motion";
 const Projects = () => {
   const projects = [
     {
+      type: "WEB RE-DESIGN",
+      name: '"IPHONESHOP"',
+      thumbnail: "4chan.jpg",
+      generalLink:
+        "https://www.figma.com/file/v9PO9HeB6eD8jJR4stFTlZ/IS-REDESIGN-2023?type=design&node-id=0-1&mode=design&t=Ri3w7Yc1nADmUZGd-0",
+      links: {
+        figma:
+          "https://www.figma.com/file/v9PO9HeB6eD8jJR4stFTlZ/IS-REDESIGN-2023?type=design&node-id=0-1&mode=design&t=Ri3w7Yc1nADmUZGd-0",
+      },
+    },
+    {
+      type: "WEB RE-DESIGN",
+      name: '"4CHAN"',
+      thumbnail: "4chan.jpg",
+      generalLink:
+        "https://www.figma.com/proto/NXeJFcwO4JbLBZgOyitkCP/4CHAN-Redise%C3%B1o-web?page-id=105%3A3117&type=design&node-id=105-3198&viewport=-199%2C-174%2C0.13&t=PPU4r4zjaBXklwwg-1&scaling=scale-down&starting-point-node-id=105%3A3198&mode=design",
+      links: {
+        behance:
+          "https://www.behance.net/gallery/175102161/Rediseno-Web-4chan-CASE-STUDY-UXUI/modules/988870445",
+        figma:
+          "https://www.figma.com/proto/NXeJFcwO4JbLBZgOyitkCP/4CHAN-Redise%C3%B1o-web?page-id=105%3A3117&type=design&node-id=105-3198&viewport=-199%2C-174%2C0.13&t=PPU4r4zjaBXklwwg-1&scaling=scale-down&starting-point-node-id=105%3A3198&mode=design",
+      },
+    },
+    {
       type: "APP MOBILE DESIGN",
       name: '"Sannabis"',
       thumbnail: "sannabis.png",
-      generalLink: "https://www.google.com",
+      generalLink:
+        "https://www.behance.net/gallery/158590459/Sannabis-UXUI-CODERHOUSE-2022/modules/894808519",
       links: {
-        behance: "https://www.google.com",
-        figma: "https://www.google.com",
+        behance:
+          "https://www.behance.net/gallery/158590459/Sannabis-UXUI-CODERHOUSE-2022/modules/894808519",
       },
     },
     {
       type: "WEB DESIGN",
       name: '"riskOfDev"',
       thumbnail: "riskofdev.png",
-      generalLink: "",
+      generalLink:
+        "https://www.figma.com/proto/2UfMk8uEUHJ11zWJAF3Mtx/PORTFOLIO?type=design&node-id=2-27&t=xDbI6Ek2d7nXMdXJ-0&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=2%3A27",
       links: {
         github: "https://www.google.com",
         demo: "https://www.google.com",
         behance: "https://www.google.com",
-        figma: "https://www.google.com",
+        figma:
+          "https://www.figma.com/proto/2UfMk8uEUHJ11zWJAF3Mtx/PORTFOLIO?type=design&node-id=2-27&t=xDbI6Ek2d7nXMdXJ-0&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=2%3A27",
       },
     },
     {
       type: "APP MOBILE DESIGN",
       name: '"Ta-Da"',
       thumbnail: "ta-da.png",
-      generalLink: "",
+      generalLink:
+        "https://www.behance.net/gallery/175260267/TA-DA-Rediseno-de-App/modules/989781487",
       links: {
-        github: "https://www.google.com",
-        demo: "https://www.google.com",
-        behance: "https://www.google.com",
-        figma: "https://www.google.com",
+        behance:
+          "https://www.behance.net/gallery/175260267/TA-DA-Rediseno-de-App/modules/989781487",
       },
     },
   ];

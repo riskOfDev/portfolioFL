@@ -51,7 +51,11 @@ const Project = ({ type, name, thumbnail, links, number, generalLink }) => {
         </a>
       </MotionBox>
 
-      <Box ml={number % 2 ? "30px" : "0px"} className="textContent">
+      <Box
+        ml={number % 2 ? "30px" : "0px"}
+        mr={number % 2 ? "0px" : "30px"}
+        className="textContent"
+      >
         {/* Name and type */}
         <MotionBox
           initial="hidden"

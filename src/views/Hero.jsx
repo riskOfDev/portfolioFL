@@ -111,6 +111,15 @@ const Hero = () => {
                       visible: { opacity: 1, transition: { duration: 0.5 } },
                     }}
                     transition={{ delay: i * 0.5 }} // Delay each fade-in by 0.5 seconds
+                    href={
+                      i === 0
+                        ? "mailto: florencialopez271100@gmail.com"
+                        : i === 1
+                        ? "https://www.behance.net/florencialpez5"
+                        : "https://www.linkedin.com/in/florencia-lópez-uxui/"
+                    }
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <Image
                       alt="social media"
