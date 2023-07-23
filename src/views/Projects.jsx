@@ -10,7 +10,7 @@ const Projects = () => {
     {
       type: "WEB RE-DESIGN",
       name: '"IPHONESHOP"',
-      thumbnail: "4chan.jpg",
+      thumbnail: "iphone.png",
       generalLink:
         "https://www.figma.com/file/v9PO9HeB6eD8jJR4stFTlZ/IS-REDESIGN-2023?type=design&node-id=0-1&mode=design&t=Ri3w7Yc1nADmUZGd-0",
       links: {
@@ -49,9 +49,6 @@ const Projects = () => {
       generalLink:
         "https://www.figma.com/proto/2UfMk8uEUHJ11zWJAF3Mtx/PORTFOLIO?type=design&node-id=2-27&t=xDbI6Ek2d7nXMdXJ-0&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=2%3A27",
       links: {
-        github: "https://www.google.com",
-        demo: "https://www.google.com",
-        behance: "https://www.google.com",
         figma:
           "https://www.figma.com/proto/2UfMk8uEUHJ11zWJAF3Mtx/PORTFOLIO?type=design&node-id=2-27&t=xDbI6Ek2d7nXMdXJ-0&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=2%3A27",
       },

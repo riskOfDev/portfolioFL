@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Hero from "../views/Hero";
 import Phrases from "../views/Phrases";
@@ -9,7 +8,6 @@ import Projects from "../views/Projects";
 import ContactMe from "../views/ContactMe";
 import Footer from "../views/Footer";
 import Career from "../views/Career";
-import Loading from "../views/Loading";
 import styles from "../styles/Index.module.css";
 
 export default function Home() {

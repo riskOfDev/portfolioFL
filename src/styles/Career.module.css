@@ -5,6 +5,18 @@
   font-size: 60px;
   /* Adjust as needed */
   font-family: "Inter";
+  color: white;
+
+}
+
+.verticalLetters {
+  -moz-transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+  background: rgb(143, 0, 255);
+  background: linear-gradient(180deg, rgb(179 83 255) 0%, rgb(34 34 34) 100%);
 }
 
 .verticalLettersRight {
@@ -13,6 +25,8 @@
   -o-transform: scale(-1, 1);
   -ms-transform: scale(-1, 1);
   transform: scale(-1, 1);
+  background: rgb(143, 0, 255);
+  background: linear-gradient(180deg, rgb(34 34 34) 0%, rgb(179 83 255) 100%);
 }
 
 .container {
