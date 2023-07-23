@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { Box, Flex, Heading, Link, chakra } from "@chakra-ui/react";
 import { motion, useAnimation } from "framer-motion";
@@ -8,7 +8,6 @@ import emojis from "./readmos/emojis";
 import TiltImage from "./TiltImage";
 import styles from "../../styles/ProjectDef.module.css";
 
-// Create a motion component using Chakra UI's Box component
 const MotionBox = chakra(motion.div);
 const MotionFlex = chakra(motion.flex);
 
@@ -24,11 +23,20 @@ const Project = ({ type, name, thumbnail, links, number, generalLink }) => {
     setOpen(!open);
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (inView) {
       controls.start("visible");
     }
   }, [controls, inView]);
+
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  useEffect(() => {
+    setWindowWidth(window.innerWidth);
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <Flex
@@ -37,7 +45,6 @@ const Project = ({ type, name, thumbnail, links, number, generalLink }) => {
       padding="30px"
       alignItems="center"
     >
-      {/* Thumbnail */}
       <MotionBox
         initial="hidden"
         animate={controls}
@@ -56,7 +63,6 @@ const Project = ({ type, name, thumbnail, links, number, generalLink }) => {
         mr={number % 2 ? "0px" : "30px"}
         className="textContent"
       >
-        {/* Name and type */}
         <MotionBox
           initial="hidden"
           animate={controls}
@@ -75,7 +81,6 @@ const Project = ({ type, name, thumbnail, links, number, generalLink }) => {
           </Box>
         </MotionBox>
 
-        {/* Links */}
         <Flex mt={4}>
           {Object.keys(links).map((link, index) => {
             return (
@@ -108,7 +113,11 @@ const Project = ({ type, name, thumbnail, links, number, generalLink }) => {
                       alt="github"
                       width={30}
                       height={30}
-                      className={styles.linkImage}
+                      className={
+                        windowWidth <= 500
+                          ? styles.iconImageSmall
+                          : styles.linkImage
+                      }
                     />
                     <span className={styles.nameLinks}>Github</span>
                   </Link>
@@ -128,7 +137,11 @@ const Project = ({ type, name, thumbnail, links, number, generalLink }) => {
                       alt="demo"
                       width={30}
                       height={30}
-                      className={styles.linkImage}
+                      className={
+                        windowWidth <= 500
+                          ? styles.iconImageSmall
+                          : styles.linkImage
+                      }
                     />
                     <span className={styles.nameLinks}>Live</span>
                   </Link>
@@ -148,7 +161,11 @@ const Project = ({ type, name, thumbnail, links, number, generalLink }) => {
                       alt="behance"
                       width={30}
                       height={30}
-                      className={styles.linkImage}
+                      className={
+                        windowWidth <= 500
+                          ? styles.iconImageSmall
+                          : styles.linkImage
+                      }
                     />
                     <span className={styles.nameLinks}>Behance</span>
                   </Link>
@@ -168,7 +185,11 @@ const Project = ({ type, name, thumbnail, links, number, generalLink }) => {
                       alt="figma"
                       width={30}
                       height={30}
-                      className={styles.linkImage}
+                      className={
+                        windowWidth <= 500
+                          ? styles.iconImageSmall
+                          : styles.linkImage
+                      }
                     />
                     <span className={styles.nameLinks}>Figma</span>
                   </Link>

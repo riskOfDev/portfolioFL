@@ -73,8 +73,8 @@ const Career = () => {
           <br />
           I hold a certification as a UI/UX Designer from Coderhouse.
           <br />
-          Currently, I am working as a UI/UX Designer at riskOfDev ( since
-          February 2023 ) ( Ad honorem )
+          Currently, I am working as a UI/UX Designer at riskOfDev ( since Feb
+          2023 ) ( Ad honorem )
           <button>
             <a
               download="Florencia_Lopez_UI_UX_DESIGNER_CV"

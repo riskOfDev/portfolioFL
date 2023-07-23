@@ -12,6 +12,10 @@
   margin-right: 8px;
 }
 
+.iconImageSmall {
+  width: 20px !important;
+  height: 20px !important;
+}
 
 @media only screen and (max-width: 1044px) {
   .nameLinks {
