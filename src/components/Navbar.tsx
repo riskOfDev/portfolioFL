@@ -29,7 +29,7 @@ const Navbar = () => {
       justify="space-between"
       px={{ base: "6", lg: "16" }}
       position="fixed"
-      zIndex="999"
+      zIndex="700"
     >
       <ChakraNextImage src="/images/logo.png" alt="logo" w="34px" h="46px" />
       <Flex gap="14" display={{ base: "none", lg: "flex" }}>

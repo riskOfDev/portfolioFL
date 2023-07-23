@@ -5,3 +5,9 @@
 .background {
   background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 15%, rgba(247, 231, 255, 1) 59%);
 }
+
+/* Fade-out animation */
+.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}

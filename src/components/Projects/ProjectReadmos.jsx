@@ -61,8 +61,6 @@ const ProjectReadmos = ({ username, repoName, name, description, link }) => {
           let emojiHTML = `<img style="width: 1em; display: inline" src="${emojis[word]}"></img>`;
 
           dirtyCopy = dirtyCopy.replace(/\:[a-zA-Z_]*\:/, emojiHTML);
-
-          console.log("dirtyCopy,dirtyCopy", dirtyCopy);
         }
       }
 
