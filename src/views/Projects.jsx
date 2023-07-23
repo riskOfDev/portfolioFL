@@ -56,7 +56,7 @@ const Projects = () => {
     {
       type: "APP MOBILE DESIGN",
       name: '"Ta-Da"',
-      thumbnail: "ta-da.png",
+      thumbnail: "ta-da2.png",
       generalLink:
         "https://www.behance.net/gallery/175260267/TA-DA-Rediseno-de-App/modules/989781487",
       links: {
