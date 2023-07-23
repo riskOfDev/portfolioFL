@@ -41,6 +41,43 @@
   /* Adjust as needed */
 }
 
+@keyframes purpleShades {
+  0% {
+    background-color: #800080;
+  }
+
+  20% {
+    background-color: #9370DB;
+  }
+
+  40% {
+    background-color: #8B008B;
+  }
+
+  60% {
+    background-color: #9932CC;
+  }
+
+  80% {
+    background-color: #BA55D3;
+  }
+
+  100% {
+    background-color: #800080;
+  }
+}
+
+.mainContent button {
+  margin-top: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: rgb(143, 0, 255);
+  color: white;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  animation: purpleShades 8s linear infinite;
+}
 
 @media only screen and (max-width: 987px) {
   .mainContent {
