@@ -113,7 +113,7 @@ const Hero = () => {
                     transition={{ delay: i * 0.5 }} // Delay each fade-in by 0.5 seconds
                     href={
                       i === 0
-                        ? "mailto: florencialopez271100@gmail.com"
+                        ? "mailto: florencialopez.uxui@gmail.com"
                         : i === 1
                         ? "https://www.behance.net/florencialpez5"
                         : "https://www.linkedin.com/in/florencia-lópez-uxui/"

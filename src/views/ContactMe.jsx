@@ -52,7 +52,7 @@ const ContactMe = () => {
         <div>
           <ul className={styles.contactList}>
             <li>
-              <a href="mailto: florencialopez271100@gmail.com">EMAIL </a>
+              <a href="mailto: florencialopez.uxui@gmail.com">EMAIL </a>
             </li>
 
             <li>
