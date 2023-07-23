@@ -50,7 +50,7 @@ const Projects = () => {
         "https://www.figma.com/proto/2UfMk8uEUHJ11zWJAF3Mtx/PORTFOLIO?type=design&node-id=2-27&t=xDbI6Ek2d7nXMdXJ-0&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=2%3A27",
       links: {
         figma:
-          "https://www.figma.com/proto/2UfMk8uEUHJ11zWJAF3Mtx/PORTFOLIO?type=design&node-id=2-27&t=xDbI6Ek2d7nXMdXJ-0&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=2%3A27",
+          "https://www.figma.com/proto/7hePuj6Z27vbwQleybwv5C/riskofdev-redesign?page-id=502%3A2&node-id=522-235&viewport=6%2C973%2C0.5&scaling=min-zoom&starting-point-node-id=522%3A235",
       },
     },
     {
