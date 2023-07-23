@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <div className={styles.footerContainer}>
       <hr className={styles.separator}></hr>
-      <div>
+      <div className={styles.words}>
         ©{year} developed by riskOfDev & FL<br></br>
         with Nextjs, Chakra UI and <span className={styles.rainbow}>love</span>
       </div>

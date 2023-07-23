@@ -58,10 +58,9 @@
   animation: rainbow 4s linear infinite;
 }
 
-
 @media only screen and (max-width: 500px) {
-  .footerContainer {
+  .words {
     padding-top: 0px;
+    font-size: 14px;
   }
-
 }
