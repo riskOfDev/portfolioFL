@@ -119,31 +119,6 @@ const Projects = () => {
           "https://drive.google.com/drive/folders/1cy7WUJh5ocK969ZOGvT470T6srrnM5pO?usp=sharing",
       },
     },
-    {
-      type: "LOGO",
-      name: "Lautaro Caniza DJ",
-      thumbnail: "lautaro.png",
-    },
-    {
-      type: "LOGO",
-      name: "Space DJ",
-      thumbnail: "space.png",
-    },
-    {
-      type: "LOGO",
-      name: "Destap! Web Service",
-      thumbnail: "destap.png",
-    },
-    {
-      type: "FLYER PRESS KIT",
-      name: "Lucio Andrés DJ Press Kit",
-      thumbnail: "lucio.png",
-    },
-    {
-      type: "FLYER",
-      name: "Techno Sessions",
-      thumbnail: "technosessions.png",
-    },
   ];
   const { ref, inView } = useInView({
     triggerOnce: true, // Change this to false if you want the animation to trigger again whenever it comes in view
