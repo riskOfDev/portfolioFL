@@ -8,7 +8,51 @@ import { motion } from "framer-motion";
 const Projects = () => {
   const projects = [
     {
-      type: "WEB RE-DESIGN",
+      type: "WEB DESIGN - Desktop & Mobile",
+      name: '"PACKAPP"',
+      thumbnail: "packapp.png",
+      generalLink:
+        "https://www.figma.com/file/KPZ2FHiWSbbh4YD6zAvS0l/PackApp?type=design&node-id=0%3A1&mode=design&t=UIaTJojDQ0e8sufg-1",
+      links: {
+        figma:
+          "https://www.figma.com/file/KPZ2FHiWSbbh4YD6zAvS0l/PackApp?type=design&node-id=0%3A1&mode=design&t=UIaTJojDQ0e8sufg-1",
+      },
+    },
+    {
+      type: "WEB DESIGN",
+      name: '"Gitano Tattoo Studio"',
+      thumbnail: "gitano.png",
+      generalLink:
+        "https://www.figma.com/file/kBhHuVVpxNvRL68cRfLSC5/Gitano-club-tattoo%2FWeb-Design-FL?type=design&node-id=0%3A1&mode=design&t=EZhBTcoEDbgnFK0U-1 ",
+      links: {
+        figma:
+          "https://www.figma.com/file/kBhHuVVpxNvRL68cRfLSC5/Gitano-club-tattoo%2FWeb-Design-FL?type=design&node-id=0%3A1&mode=design&t=EZhBTcoEDbgnFK0U-1 ",
+      },
+    },
+    {
+      type: "WEB DESIGN",
+      name: "Andrea Finten - Landing Page",
+      thumbnail: "andrea.png",
+      generalLink:
+        "https://www.figma.com/file/D3dxy5wCVJjPJd7u3VdaoQ/WEB-DESIGN%2FAndrea-Finten?type=design&node-id=0%3A1&mode=design&t=W3ZwQngN4AeAD6Pg-1",
+      links: {
+        figma:
+          "https://www.figma.com/file/D3dxy5wCVJjPJd7u3VdaoQ/WEB-DESIGN%2FAndrea-Finten?type=design&node-id=0%3A1&mode=design&t=W3ZwQngN4AeAD6Pg-1",
+      },
+    },
+    {
+      type: "WEB DESIGN",
+      name: "Portfolio FL",
+      thumbnail: "portfoliofl.png",
+      generalLink:
+        "https://www.figma.com/file/2UfMk8uEUHJ11zWJAF3Mtx/Portfolio-FL|Web-Design?type=design&node-id=0%3A1&mode=design&t=RqovQxXFMRLi4KEj-1",
+      links: {
+        figma:
+          "https://www.figma.com/file/2UfMk8uEUHJ11zWJAF3Mtx/Portfolio-FL|Web-Design?type=design&node-id=0%3A1&mode=design&t=RqovQxXFMRLi4KEj-1",
+      },
+    },
+    {
+      type: "WEB DESIGN",
       name: '"IPHONESHOP"',
       thumbnail: "iphone.png",
       generalLink:
@@ -63,6 +107,42 @@ const Projects = () => {
         behance:
           "https://www.behance.net/gallery/175260267/TA-DA-Rediseno-de-App/modules/989781487",
       },
+    },
+    {
+      type: "GRAPHIC DESIGN - BRAND IDENTITY",
+      name: "Domus",
+      thumbnail: "domus.png",
+      generalLink:
+        "https://drive.google.com/drive/folders/1cy7WUJh5ocK969ZOGvT470T6srrnM5pO?usp=sharing",
+      links: {
+        behance:
+          "https://drive.google.com/drive/folders/1cy7WUJh5ocK969ZOGvT470T6srrnM5pO?usp=sharing",
+      },
+    },
+    {
+      type: "LOGO",
+      name: "Lautaro Caniza DJ",
+      thumbnail: "lautaro.png",
+    },
+    {
+      type: "LOGO",
+      name: "Space DJ",
+      thumbnail: "space.png",
+    },
+    {
+      type: "LOGO",
+      name: "Destap! Web Service",
+      thumbnail: "destap.png",
+    },
+    {
+      type: "FLYER PRESS KIT",
+      name: "Lucio Andrés DJ Press Kit",
+      thumbnail: "lucio.png",
+    },
+    {
+      type: "FLYER",
+      name: "Techno Sessions",
+      thumbnail: "technosessions.png",
     },
   ];
   const { ref, inView } = useInView({

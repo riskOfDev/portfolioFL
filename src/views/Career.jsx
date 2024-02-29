@@ -71,11 +71,13 @@ const Career = () => {
           <br />
           products that brings transformative user experiences.
           <br />
-          I hold a certification as a UI/UX Designer from Coderhouse.
+          I hold a certification as a UI/UX Designer from Coderhouse, Coursera
+          and LinkedIn Learning.
           <br />
-          Currently, I am working as a UI/UX Designer at riskOfDev ( since Feb
-          2023 ) ( Ad honorem )
-          <button>
+          With over two years of professional experience, I apply my skills at
+          Packapp and ROD, focusing on creating intuitive and aesthetically
+          pleasing digital solutions.
+          <button style={{ borderRadius: "6px" }}>
             <a
               download="Florencia_Lopez_UI_UX_DESIGNER_CV"
               href="/cv/Florencia_Lopez_UI_UX_DESIGNER_CV.pdf"

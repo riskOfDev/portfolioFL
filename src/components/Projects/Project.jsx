@@ -3,25 +3,16 @@ import Image from "next/image";
 import { Box, Flex, Heading, Link, chakra } from "@chakra-ui/react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import DOMPurify from "isomorphic-dompurify";
-import emojis from "./readmos/emojis";
 import TiltImage from "./TiltImage";
 import styles from "../../styles/ProjectDef.module.css";
 
 const MotionBox = chakra(motion.div);
-const MotionFlex = chakra(motion.flex);
 
 const Project = ({ type, name, thumbnail, links, number, generalLink }) => {
-  const [open, setOpen] = useState(false);
   const controls = useAnimation();
   const { ref, inView } = useInView({
     triggerOnce: true,
   });
-
-  const handleClick = () => {
-    console.log("clicked");
-    setOpen(!open);
-  };
 
   useEffect(() => {
     if (inView) {
@@ -53,16 +44,16 @@ const Project = ({ type, name, thumbnail, links, number, generalLink }) => {
           visible: { opacity: 1, transition: { delay: 0.7 } },
         }}
       >
-        <a href={generalLink}>
-          <TiltImage image={`/thumbnails/${thumbnail}`}></TiltImage>
-        </a>
+        {generalLink ? (
+          <a href={generalLink} target="_blank" rel="noopener noreferrer">
+            <TiltImage image={`/thumbnails/${thumbnail}`} />
+          </a>
+        ) : (
+          <TiltImage image={`/thumbnails/${thumbnail}`} />
+        )}
       </MotionBox>
 
-      <Box
-        ml={number % 2 ? "30px" : "0px"}
-        mr={number % 2 ? "0px" : "30px"}
-        className="textContent"
-      >
+      <Box ml={number % 2 ? "30px" : "0px"} mr={number % 2 ? "0px" : "30px"}>
         <MotionBox
           initial="hidden"
           animate={controls}
@@ -82,8 +73,8 @@ const Project = ({ type, name, thumbnail, links, number, generalLink }) => {
         </MotionBox>
 
         <Flex mt={4}>
-          {Object.keys(links).map((link, index) => {
-            return (
+          {links &&
+            Object.keys(links).map((link, index) => (
               <MotionBox
                 initial="hidden"
                 animate={controls}
@@ -95,108 +86,34 @@ const Project = ({ type, name, thumbnail, links, number, generalLink }) => {
                   },
                 }}
                 key={link}
-                className={links}
               >
-                {link === "github" && (
-                  <Link
-                    href={links[link]}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    display="flex"
-                    alignItems="center"
-                    mr={4}
-                    _hover={{ color: "blue.500" }}
-                    className={styles.linkItem}
-                  >
-                    <Image
-                      src="/icons/github.svg"
-                      alt="github"
-                      width={30}
-                      height={30}
-                      className={
-                        windowWidth <= 500
-                          ? styles.iconImageSmall
-                          : styles.linkImage
-                      }
-                    />
-                    <span className={styles.nameLinks}>Github</span>
-                  </Link>
-                )}
-                {link === "demo" && (
-                  <Link
-                    href={links[link]}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    display="flex"
-                    alignItems="center"
-                    mr={4}
-                    _hover={{ color: "blue.500" }}
-                  >
-                    <Image
-                      src="/icons/web-2.svg"
-                      alt="demo"
-                      width={30}
-                      height={30}
-                      className={
-                        windowWidth <= 500
-                          ? styles.iconImageSmall
-                          : styles.linkImage
-                      }
-                    />
-                    <span className={styles.nameLinks}>Live</span>
-                  </Link>
-                )}
-                {link === "behance" && (
-                  <Link
-                    href={links[link]}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    display="flex"
-                    alignItems="center"
-                    mr={4}
-                    _hover={{ color: "blue.500" }}
-                  >
-                    <Image
-                      src="/icons/behance.svg"
-                      alt="behance"
-                      width={30}
-                      height={30}
-                      className={
-                        windowWidth <= 500
-                          ? styles.iconImageSmall
-                          : styles.linkImage
-                      }
-                    />
-                    <span className={styles.nameLinks}>Behance</span>
-                  </Link>
-                )}
-                {link === "figma" && (
-                  <Link
-                    href={links[link]}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    display="flex"
-                    alignItems="center"
-                    mr={4}
-                    _hover={{ color: "blue.500" }}
-                  >
-                    <Image
-                      src="/icons/figma.svg"
-                      alt="figma"
-                      width={30}
-                      height={30}
-                      className={
-                        windowWidth <= 500
-                          ? styles.iconImageSmall
-                          : styles.linkImage
-                      }
-                    />
-                    <span className={styles.nameLinks}>Figma</span>
-                  </Link>
-                )}
+                <Link
+                  href={links[link]}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  display="flex"
+                  alignItems="center"
+                  mr={4}
+                  _hover={{ color: "blue.500" }}
+                  className={styles.linkItem}
+                >
+                  <Image
+                    src={`/icons/${link}.svg`}
+                    alt={link}
+                    width={30}
+                    height={30}
+                    className={
+                      windowWidth <= 500
+                        ? styles.iconImageSmall
+                        : styles.linkImage
+                    }
+                  />
+                  <span className={styles.nameLinks}>
+                    {link.charAt(0).toUpperCase() + link.slice(1)}
+                  </span>
+                </Link>
               </MotionBox>
-            );
-          })}
+            ))}
         </Flex>
       </Box>
     </Flex>
