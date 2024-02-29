@@ -53,4 +53,6 @@
   background-size: cover;
   transition: 1s opacity;
   object-fit: cover;
+  opacity: 0.5;
+  /* Adjust the opacity as needed */
 }
